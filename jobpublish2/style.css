@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 ul {
@@ -13,6 +14,14 @@ a {
     text-decoration: none;
 }
 
+.h2 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+p {
+    opacity: 0.4;
+}
 
 section {
     height: 750px;
@@ -131,7 +140,7 @@ nav .menu {
     outline: none;
 }
 
-.search-box {
+#best .search-box {
     width: 100%;
     background-color: #232931;
     box-shadow: 0 75px 94px -66px rgba(0, 0, 0, 0.1);
@@ -143,6 +152,41 @@ nav .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.search-box > .inline {
+    padding: 24px;
+}
+
+.search-box > .inline > ul > li {
+    line-height: 50%;
+    float: left;
+    color: white;
+    position: relative;
+    width: 200px;
+}
+
+.search-box > .inline > ul > li > button {
+    line-height: 50%;
+    width: 100%;
+    padding: 22px 10px;
+    background-color: #ffb400;
+    outline: none;
+    border: 1px solid #ffb400;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-box > .inline > ul > li > ul > li {
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    height: 30px;
+}
+
+.search-box > .inline > ul > li > ul > li:last-child {
+    opacity: 0.4;
 }
 
 #best > .container {
@@ -178,12 +222,15 @@ nav .menu {
 
 .place-item .img-div {
     height: 250px;
+    overflow: hidden;
 }
 
 .place-item .img-div > img {
-    width: 100%;
-    height: 100%;
+    width: 120%;
+    height: 120%;
+    transform: translate(-10%,-10%);
     object-fit: cover;
+    transition: all 0.5s;
 }
 
 .place-item .text-div {
@@ -207,6 +254,16 @@ nav .menu {
     font-size: 18px;
     box-shadow: 0 20px 43px -8px rgba(0, 0, 0, 0.1);
     letter-spacing: 2px;
+}
+
+.place-item:hover .img-div > img{
+    width: 100%;
+    height: 100%;
+    transform: translate(0,0);
+}
+
+.place-item:hover .price {
+    background: #ffb400;
 }
 
 .text-div > .day {
@@ -236,4 +293,504 @@ nav .menu {
     font-size: 14px;
     letter-spacing: 2px;
     color: rgba(0, 0, 0, 0.4);
+}
+
+#guide {
+    background-color: #f8f9fa;
+    padding: 112px 0;
+    height: auto;
+}
+
+.guide {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide > div {
+    width: 12.2%;
+    float: left;
+    margin: 0 20px;
+}
+
+.guide > div > img {
+    width: 70px;
+    height: 70px;
+    padding: 5px 0;
+}
+
+.guide > div > h5{
+    padding: 5px 0;
+}
+
+.guide > div > p{
+    opacity: 0.4;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 5px 0;
+}
+
+#About {
+    position: relative;
+}
+
+#About > .container {
+    position: relative;
+}
+
+#About > .container > img {
+    width: 540px;
+    height: 678px;
+}
+
+#About > .container > .rightplace {
+    width: 50%;
+    height: 100%;
+    padding: 20px 40px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    text-align: left;
+}
+
+#About > .container > .rightplace > h2 {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+}
+
+.rightplace > p {
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.rightplace > .boxs {
+    width: 100%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    position: relative;
+}
+
+.rightplace > .boxs > .box {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightplace > .boxs > .box > .center {
+    text-align: center;
+}
+
+.rightplace > .boxs > .box > .center > h3 {
+    
+    font-weight: 600;
+}
+
+.rightplace > .boxs > .box > .center > p {
+    color: #999999;
+    opacity: 1;
+}
+
+#HAR {
+    text-align: center;
+}
+
+#HAR > .container > .h2 {
+    margin-bottom: 20px;
+}
+
+#HAR > .container > p {
+    margin-bottom: 50px;
+}
+
+#HAR .place-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+#HAR .place-list .place-item {
+    height: 500px;
+}
+
+#HAR .place-item .img-div {
+    height: 400px;
+    overflow: hidden;
+}
+
+#HAR .place-item .text-div {
+    text-align: left;
+}
+
+#Things {
+    position: relative;
+}
+
+#Things > .container {
+    position: relative;
+}
+
+#Things > .container > img {
+    width: 540px;
+    height: 750px;
+    float: right;
+}
+
+#Things > .container > .leftplace {
+    width: 48%;
+    height: 100%;
+    padding: 20px 40px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    left: 0;
+    text-align: left;
+}
+
+#Things > .container > .leftplace > .h2 {
+    margin-bottom: 1.5rem;
+}
+
+.leftplace > p {
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.leftplace > ul > li {
+    margin: 20px 0;
+}
+
+.leftplace > ul > li > h5 {
+    display: inline;
+}
+
+.leftplace > ul > li > p {
+    display: inline;
+}
+
+.leftplace > button {
+    width: 200px;
+    height: 60px;
+    padding: 16px 48px;
+    color: #fff;
+    border: 1px solid #ffb400;
+    background-color: #ffb400;
+    border-radius: 2px;
+    outline: none;
+}
+
+#Happy {
+    background-image: url('images/bg_1.jpg');
+    position: relative;
+}
+
+#Happy > .overay {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .9;
+    background: #232931;
+}
+
+.centercontainer {
+    padding-top: 100px;
+    position: absolute;
+    z-index: 6;
+    width: 60%;
+    height: 100%;
+    margin-left: 20%;
+}
+
+#Happy > .centercontainer > .h2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#Happy > .centercontainer > .imgbox {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    bottom: 0;
+}
+
+#Happy > .centercontainer > .imgbox > .img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#Happy > .centercontainer > .imgbox > .img:first-child {
+    background-image: url('https://colorlib.com/preview/theme/traveland/images/traveler-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Happy > .centercontainer > .imgbox > .img:nth-child(2) {
+    background-image: url('https://colorlib.com/preview/theme/traveland/images/traveler-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Happy > .centercontainer > .imgbox > .img:last-child {
+    background-image: url('https://colorlib.com/preview/theme/traveland/images/traveler-3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Happy > .centercontainer > .imgbox > .img > .text-box {
+    padding: 50px;
+    width: 50%;
+    position: relative;
+}
+
+#Happy > .centercontainer > .imgbox > .img p {
+    font-size: 30px;
+    color: white;
+    opacity: 1;
+    position: absolute;
+}
+
+#Happy > .centercontainer > .imgbox > .img p:last-child {
+    top: 400px;
+    font-size: 15px;
+}
+
+#Happy > .centercontainer > .imgbox > .img h1 {
+    position: absolute;
+    top: 300px;
+    color: white;
+}
+
+.button-box {
+    width: 102px;
+    height: 50px;
+    position: absolute;
+    z-index: 55;
+    bottom: 0;
+    right: 0;
+}
+
+.button-box > div {
+    float: left;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.button-box > .rightarrow {
+    margin-left: 1px;
+}
+
+.button-box > .leftarrow {
+    margin-right: 1px;
+}
+
+#Stories > .centercontainer > .h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+} 
+
+#Stories > .centercontainer > ul > li{
+    width: 30%;
+    height: 250px;
+    position: relative;
+    float: left;
+    margin: 1.5%;
+}
+
+#Stories > .centercontainer > ul > li > p {
+    color: black;
+    opacity: 1;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+#Stories > .centercontainer > ul > li > .img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+#Stories > .centercontainer > ul > li > .img > .text-box {
+    position: absolute;
+    bottom: 0;
+    padding-left: 10px;
+}
+
+#Stories > .centercontainer > ul > li > .img > .text-box > h1, #Stories > .centercontainer > ul > li > .img > .text-box > p {
+    float: left;
+}
+
+#Stories > .centercontainer > ul > li > .img > .text-box > p {
+    color: white;
+    opacity: 1;
+}
+
+#Stories > .centercontainer > ul > li > .img > .text-box > h1 {
+    color: #ffb400;
+    margin-right: 10px;
+}
+
+#Stories > .centercontainer > ul > li:first-child > .img {
+    background-image: url('https://colorlib.com/preview/theme/traveland/images/image_1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Stories > .centercontainer > ul > li:nth-child(2) > .img {
+    background-image: url('https://colorlib.com/preview/theme/traveland/images/image_2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Stories > .centercontainer > ul > li:last-child > .img {
+    background-image: url('https://colorlib.com/preview/theme/traveland/images/image_3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#footerlogo {
+    height: 500px;
+    background-image: url('images/bg_1.jpg')
+}
+
+footer {
+    width: 100%;
+    height: 750px;
+    background-color: #222831;
+    color: white;
+    position: relative;
+}
+
+footer .search-box {
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 75px 94px -66px rgba(0, 0, 0, 0.1);
+    height: 250px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    top: -150px;
+    padding: 30px;
+}
+
+footer .search-box > p {
+    color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    font-weight: 900;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+footer .search-box > form > input {
+    height: 70px;
+}
+
+.email {
+    font-size: 20px;
+    padding: 12px 20px;
+    width: 500px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.subscribe {
+    color: white;
+    height: 70px;
+    width: 150px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    line-height: 50%;
+    text-align: center;
+    background-color: #ffb400;
+    outline: none;
+    border: 1px solid #ffb400;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer > .container {
+    padding-top: 100px;
+}
+
+footer > .container > ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > .container > ul > li {
+    width: 250px;
+    height: 400px;
+    margin-right: 30px;
+    float: left;
+}
+
+footer > .container > ul > li > p {
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+    opacity: 1;
+}
+
+footer > .container > ul > li > ul > li {
+    opacity: 0.85;
+}
+
+footer > .container > ul > li:first-child > ul > li {
+    margin-bottom: 50px;
+}
+
+footer > .container > ul > li:first-child > ul > li > ul > li {
+    float: left;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 25px;
+}
+
+footer > .container > ul > li:nth-child(2) > ul > li {
+    margin: 20px 0;
+    opacity: 0.4;
+}
+
+footer > .container > ul > li:nth-child(3) > ul > li {
+    margin: 20px 0;
+    opacity: 0.4;
+}
+
+footer > .container > ul > li:last-child > ul > li {
+    margin: 20px 0;
+}
+
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
